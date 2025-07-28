@@ -12,32 +12,43 @@
 
 <body>
 
-    <h1 class="heading"> <img src="./assets/images/spock-logo.png" width="40" alt="A logo of Spock"> Rock Paper Scissors
-        Lizard Spock</h1>
-    <div class="game-area"></div>
-    <div class="score-area">
-        <p>Player: <span id="player-score">0</span></p>
-        <p>VS</p>
-        <p>Computer: <span id="computer-score">0</span></p>
-    </div>
-    <button id="btn-rock">rock</button>
-    <button id="btn-paper">paper</button>
-    <button id="btn-scissor">scissor</button>
-    <button id="btn-lizard">lizard</button>
-    <button id="btn-spock">spock</button>
+    <header>
+        <h2><img class="logo" src="./assets/images/spock-logo.png" alt="A logo of Spock"> Rock Paper Scissors
+            Lizard Spock <img class="logo" src="./assets/images/lizard-logo.png" alt="A lizard logo"></h2>
+    </header>
 
-    <div class="results">
-        <h2>Results</h2>
-        <p>It's a tie! Both chose lizard</p>
-    </div>
+    <main class="game-area">
+      
+        <div class="buttons">
+            <button class="control" id="btn-rock">rock</button>
+            <button class="control" id="btn-paper">paper</button>
+            <button class="control" id="btn-scissor">scissor</button>
+            <button class="control" id="btn-lizard">lizard</button>
+            <button class="control" id="btn-spock">spock</button>
+        </div>
+
+        <div class="messages">It's a tie! Both chose scissors.</div>
+        <div class="player">
+            <p>Player: <span id="player-score">0</span></p>
+            <img src="./assets/images/player-image.png" alt="Rock Paper Scissors Lizard Spock" id="player-image">
+        </div>
+        <div class="versus-logo">
+        <img id="versus-image" src="./assets/images/versus-logo.png"  alt="Versus logo">
+        </div>
+        <div class="computer">
+            <p>Computer: <span id="computer-score">0</span></p>
+            <img src="./assets/images/computer-image.png" alt="Rock Paper Scissors Lizard Spock" id="computer-image">
+        </div>
 
 
+    </main>
 
-
-
-
-
-
+    <footer>
+        <h4>Rules</h4>
+        <p>Scissors cuts Paper / Paper covers Rock / Rock crushes Lizard / Lizard poisons Spock / Spock smashes Scissors
+            / Scissors decapitates Lizard / Lizard eats Paper / Paper disproves Spock / Spock vaporizes Rock /
+            (and as it always has) Rock crushes Scissors </p>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
 </body>
