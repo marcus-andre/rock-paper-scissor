@@ -50,6 +50,10 @@ height: 30px;
 width: 80px;
 margin: 10px 5px;   
 }
+
+.control:hover {
+    background-color: rgb(57, 209, 201);
+}
 .messages {
     margin-top: 1%;
     margin-bottom: 3%;
@@ -57,9 +61,8 @@ margin: 10px 5px;
 }
 
 .player {
-    margin-top: 2%;
     text-align: center;
-    background-color: lightblue;
+    background-color: rgb(173, 203, 230);
     float: left;
     width: 45%;
 }
