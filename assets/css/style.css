@@ -4,11 +4,9 @@ html {
     position: relative;
 }
 body {
- 
-   
-    margin: 0;
-   
     
+    margin: 0;
+       
 }
 
 
@@ -16,7 +14,7 @@ header {
     
     background-color: rgb(173, 216, 220);
     height: 85px;
-   line-height: 15px;
+    line-height: 15px;
     text-align: center;
     box-shadow: 0 2px 2px #3a3a3a;
 }

@@ -18,16 +18,15 @@
     </header>
 
     <main class="game-area">
-      
         <div class="buttons">
-            <button class="control" id="btn-rock">rock</button>
-            <button class="control" id="btn-paper">paper</button>
-            <button class="control" id="btn-scissor">scissor</button>
-            <button class="control" id="btn-lizard">lizard</button>
-            <button class="control" id="btn-spock">spock</button>
+            <button aria-label="Rock" class="control" data-choice="0">rock</button>
+            <button aria-label="Paper" class="control" data-choice="1">paper</button>
+            <button aria-label="Scissor" class="control" data-choice="2">scissor</button>
+            <button aria-label="Lizard" class="control" data-choice="3">lizard</button>
+            <button aria-label="Spock" class="control" data-choice="4">spock</button>
         </div>
 
-        <div class="messages">It's a tie! Both chose scissors.</div>
+        <div class=" messages">It's a tie! Both chose scissors.</div>
         <div class="player">
             <p>Player: <span id="player-score">0</span></p>
             <img src="./assets/images/player-image.png" alt="Rock Paper Scissors Lizard Spock" id="player-image">
@@ -41,7 +40,7 @@
         </div>
 
 
-    </main>
+</main>
 
     <footer>
         <h4>Rules</h4>
