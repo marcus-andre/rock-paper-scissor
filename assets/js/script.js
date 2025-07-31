@@ -1,5 +1,4 @@
-
- //Declaring constants for DOM elements
+//Declaring constants for DOM elements
 
 const choices = ["rock", "paper", "scissor", "lizard", "spock"];
 const computerImg = document.getElementById("computer-image");
@@ -9,44 +8,42 @@ const computerScore = document.getElementById("computer-score");
 const playerScore = document.getElementById("player-score");
 const buttons = document.getElementsByClassName("control");
 
+// Rules for winning combinations
+const rules = {
+  rock: { beats: ["scissors", "lizard"] },
+  paper: { beats: ["rock", "spock"] },
+  scissors: { beats: ["paper", "lizard"] },
+  lizard: { beats: ["spock", "paper"] },
+  spock: { beats: ["scissors", "rock"] },
+};
 
- // Rules for winning combinations
-    const rules = {
-      rock: { beats: ['scissors', 'lizard'] },
-      paper: { beats: ['rock', 'spock'] },
-      scissors: { beats: ['paper', 'lizard'] },
-      lizard: { beats: ['spock', 'paper'] },
-      spock: { beats: ['scissors', 'rock'] }
-    };
-
-
- //Add event listener to all buttons 
+//Add event listener to all buttons
 for (let btn of buttons) {
-  btn.addEventListener("click",function(){
+  btn.addEventListener("click", function () {
     let playerChoice = this.getAttribute("data-choice");
-     console.log(playerChoice);
+    console.log(playerChoice);
     gamePlay(playerChoice);
   });
 }
 
-function gamePlay(playerChoice){
+/*Function that update player and computer images depending on their choice (computer is a random choice),
+ *call a determineWinner function with the selected choices and assign the result of the winner to "result" variable.
+ *Then another function is called for update the scores.*/
+function gamePlay(playerChoice) {
   //console.log(playerImg);
   //console.log(computerImg);
   playerImg.src = `assets/images/${choices[playerChoice]}.png`;
   playerImg.alt = choices[playerChoice];
 
-  let computerChoice = Math.floor(Math.random()*5);
+  let computerChoice = Math.floor(Math.random() * 5);
 
   computerImg.src = `assets/images/${choices[computerChoice]}.png`;
   computerImg.alt = choices[computerChoice];
 
-  let result = determineWinner(choices[playerChoice],choices[computerChoice]);
+  let result = determineWinner(choices[playerChoice], choices[computerChoice]);
 
   updateScore(result);
-
 }
-
-
 
 // Determine the winner
 function determineWinner(player, computer) {
@@ -55,18 +52,14 @@ function determineWinner(player, computer) {
   }
 
   /*rules[player] is an object defined ealier that maps each choice to the option it brats.
-   For each choice, the object have a beats property with list of choice it defeats.
-   e.g[scissor, lizard] for rock. All we need to do is check if rock is contained in that list
-   */
+   *For each choice, the object have a beats property with list of choice it defeats.
+   *e.g[scissor, lizard] for rock. All we need to do is check if rock is contained in that list*/
   if (rules[player].beats.indexOf(computer) !== -1) {
     return "player";
   }
   return "computer";
 }
 
-
 function updateScore(result) {
-
-
   
 }
