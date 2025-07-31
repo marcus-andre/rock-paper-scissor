@@ -1,13 +1,13 @@
 
  //Declaring constants for DOM elements
 
-const choice = ["rock", "paper", "scissor", "lizard", "spock"];
+const choices = ["rock", "paper", "scissor", "lizard", "spock"];
 const computerImg = document.getElementById("computer-image");
 const playerImg = document.getElementById("player-image");
 const messages = document.getElementById("messages");
 const computerScore = document.getElementById("computer-score");
 const playerScore = document.getElementById("player-score");
-const buttons = document.getElementById("control");
+const buttons = document.getElementsByClassName("control");
 
 
  // Rules for winning combinations
@@ -20,3 +20,53 @@ const buttons = document.getElementById("control");
     };
 
 
+ //Add event listener to all buttons 
+for (let btn of buttons) {
+  btn.addEventListener("click",function(){
+    let playerChoice = this.getAttribute("data-choice");
+     console.log(playerChoice);
+    gamePlay(playerChoice);
+  });
+}
+
+function gamePlay(playerChoice){
+  //console.log(playerImg);
+  //console.log(computerImg);
+  playerImg.src = `assets/images/${choices[playerChoice]}.png`;
+  playerImg.alt = choices[playerChoice];
+
+  let computerChoice = Math.floor(Math.random()*5);
+
+  computerImg.src = `assets/images/${choices[computerChoice]}.png`;
+  computerImg.alt = choices[computerChoice];
+
+  let result = determineWinner(choices[playerChoice],choices[computerChoice]);
+
+  updateScore(result);
+
+}
+
+
+
+// Determine the winner
+function determineWinner(player, computer) {
+  if (player === computer) {
+    return "tie";
+  }
+
+  /*rules[player] is an object defined ealier that maps each choice to the option it brats.
+   For each choice, the object have a beats property with list of choice it defeats.
+   e.g[scissor, lizard] for rock. All we need to do is check if rock is contained in that list
+   */
+  if (rules[player].beats.indexOf(computer) !== -1) {
+    return "player";
+  }
+  return "computer";
+}
+
+
+function updateScore(result) {
+
+
+  
+}
