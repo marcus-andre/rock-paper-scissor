@@ -52,12 +52,15 @@ margin: 10px 5px;
 .control:hover {
     background-color: rgb(57, 209, 201);
 }
-.messages {
-    margin-top: 1%;
-    margin-bottom: 3%;
+#messages {
+  
     text-align: center;
 }
-
+.space {
+    text-align: center;
+   align-content: center;
+    height: 25px;
+}
 .player {
     text-align: center;
     background-color: rgb(173, 203, 230);

@@ -1,13 +1,14 @@
 //Declaring constants for DOM elements
 
-const choices = ["rock", "paper", "scissor", "lizard", "spock"];
+const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 const computerImg = document.getElementById("computer-image");
 const playerImg = document.getElementById("player-image");
 const messages = document.getElementById("messages");
 const computerScore = document.getElementById("computer-score");
 const playerScore = document.getElementById("player-score");
 const buttons = document.getElementsByClassName("control");
-
+let playerCount=0;
+let computerCount=0;
 // Rules for winning combinations
 const rules = {
   rock: { beats: ["scissors", "lizard"] },
@@ -41,8 +42,8 @@ function gamePlay(playerChoice) {
   computerImg.alt = choices[computerChoice];
 
   let result = determineWinner(choices[playerChoice], choices[computerChoice]);
-
   updateScore(result);
+  displayResults(playerChoice,computerChoice,result);
 }
 
 // Determine the winner
@@ -59,7 +60,29 @@ function determineWinner(player, computer) {
   }
   return "computer";
 }
+console.log(playerScore);
 
 function updateScore(result) {
   
+  if (result === 'player') {
+        playerScore.innerText = ++playerCount;
+       
+      } else if (result === 'computer') {
+      computerScore.innerText= ++computerCount;
+      }
+   
+}
+
+function displayResults(player,computer,result){
+console.log(messages)
+  if(result==='tie'){
+    messages.innerText = `It's a tie! Both chose ${choices[player]}`;
+  }
+  else if(result==='player'){
+    messages.innerText = `You win! "${choices[player].toUpperCase()}" beats "${choices[computer].toUpperCase()}".`
+  }
+  else {
+     messages.innerText = `You lost! "${choices[computer].toUpperCase()}" beats "${choices[player].toUpperCase()}".`
+  }
+
 }
