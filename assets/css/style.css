@@ -1,98 +1,101 @@
 html {
-   background-color: rgb(235, 234, 234);
+    background-color: rgb(235, 234, 234);
     min-height: 100%;
     position: relative;
 }
 body {
-    
     margin: 0;
-       
+    margin-bottom: 25px;
 }
-
-
 header {
-    
     background-color: rgb(173, 216, 220);
     height: 85px;
     line-height: 15px;
     text-align: center;
     box-shadow: 0 2px 2px #3a3a3a;
 }
-header>h2{
+header>h2 {
     margin-top: 0;
 }
 .logo {
-
     width: 40px;
-
 }
-
 .game-area {
-    margin-top: 2%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Alinha .player, .versus-logo e .computer horizontalmente */
+    align-items: stretch; /* Garante que .player e .computer tenham a mesma altura */
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
-  
-   
+    width: 80%;
+    min-height: 60vh; /* Ocupa a maior parte da altura da tela */
 }
-
 .buttons {
-    margin-top: 1%;
- text-align: center;
+    margin-top: 20px;
+    
+    text-align: center;
 }
-
 .control {
-display: inline-block;
-margin: 2px;
-height: 30px;
-width: 80px;
-margin: 10px 5px;   
+    display: inline-block;
+    margin: 2px;
+    height: 30px;
+    width: 80px;
+    margin: 10px 5px;
 }
-
 .control:hover {
     background-color: rgb(57, 209, 201);
 }
 #messages {
-  
     text-align: center;
 }
 .space {
     text-align: center;
-   align-content: center;
+    align-content: center;
     height: 25px;
 }
 .player {
-    text-align: center;
+    display: flex; /* Centraliza a imagem */
+     flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     background-color: rgb(173, 203, 230);
-    float: left;
     width: 45%;
+    box-shadow: -4px -0.5px 4px rgb(151, 156, 161);
+    
 }
-#player-image{
+#player-image {
     width: 75%;
+    height: auto; /* Mantém proporção */
 }
-.computer{
-    text-align: center;
-     background-color: rgb(240, 128, 128);
-    float: right;
+.computer {
+    display: flex; /* Centraliza a imagem */
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: rgb(240, 128, 128);
     width: 45%;
+    box-shadow: -4px -0.5px 4px #ae8075;
+   
 }
-#computer-image{
+#computer-image {
     width: 75%;
+    height: auto; /* Mantém proporção */
+    
 }
-
-.versus-logo{
-    margin-top: 0.5%;
-   display: inline-block;
-   width: 10%;
-   text-align: center;
-   height: 100%;
-      
+.computer>p, .player>p{
+   margin: 10px 0;
+    
 }
-
-#versus-image{
+.versus-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o logo verticalmente */
+    width: 10%;
+}
+#versus-image {
     width: 100%;
 }
-
 h4 {
     font-size: 1rem;
     margin-top: 10px;
@@ -100,18 +103,34 @@ h4 {
     text-align: center;
 }
 footer>p {
-   font-size: 0.rem;
+    font-size: 0.8rem; /* Corrige o erro de 0.rem para 0.8rem */
     margin: 0;
     line-height: 20px;
 }
 footer {
     color: rgb(36, 36, 36);
-    background-color: rgb(240, 145, 110);
-    box-shadow: -1rem -1px 1rem #e940034e;
+    background-color: rgb(240, 145, 110);   
     position: absolute;
-    bottom: 0%;
+    top:100%;
     left: 0%;
     min-height: 100px;
     text-align: center;
     width: 100%;
+}
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .game-area {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center;
+        min-height: 60vh; /* Ajusta a altura para telas menores */
+    }
+    .player, .computer {
+        width:100%; /* Ocupa toda a largura */
+        min-height: 20vh; /* Divide o espaço vertical igualmente */
+    }
+    .versus-logo {
+        width: 20%;
+        margin: 10px 0;
+    }
+   
 }
