@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Neucha&family=Rock+Salt&display=swap');
+
 html {
     background-color: rgb(247, 253, 250);
     height: 90vh;
@@ -15,22 +17,22 @@ body {
     margin-left: auto;
     margin-right: auto;
     height: 100%;
-    
+
 }
 
 
 header {
     width: 100%;
     background-color: rgb(173, 216, 220);
-   
+    font-family: "Rock Salt", cursive;
     line-height: 15px;
     text-align: center;
     box-shadow: -4px 4px 4px #7a8f88;
-    margin-bottom:10px; 
+    margin-bottom: 10px;
 }
 
 header>h2 {
-   font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .logo {
@@ -41,13 +43,13 @@ header>h2 {
 
 .game-area {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     width: 75%;
-    padding: 2% 0;
-
+   
+    font-family: "Neucha", cursive;
 }
 
 .buttons {
@@ -56,6 +58,7 @@ header>h2 {
 }
 
 .control {
+    font-family: "Neucha", cursive;
     margin: 5px 2px;
     display: inline-block;
     height: 30px;
@@ -68,8 +71,9 @@ header>h2 {
 }
 
 #messages {
-
+    font-family: "Rock Salt", cursive;
     text-align: center;
+    font-size: 0.8rem;
 }
 
 .space {
@@ -85,7 +89,7 @@ header>h2 {
     justify-content: center;
     align-items: center;
     background-color: rgb(173, 203, 230);
-     box-shadow: -4px 4px 4px #5a66744e;
+    box-shadow: -4px 4px 4px #5a66744e;
     width: 50%;
 
 }
@@ -102,7 +106,7 @@ header>h2 {
     justify-content: center;
     align-items: center;
     background-color: rgb(240, 128, 128);
-     box-shadow: -4px 4px 4px #74615a4e;
+    box-shadow: -4px 4px 4px #74615a4e;
     width: 50%;
 
 }
@@ -131,21 +135,20 @@ h4 {
 }
 
 footer {
-    flex-grow: 1; 
-    padding-top: 1%;
+    font-family: "Montserrat", sans-serif;
     color: rgb(36, 36, 36);
     background-color: rgb(240, 145, 110);
     box-shadow: -4px 4px 4px #5a66744e;
     position: absolute;
     top: 100%;
-   height: 10vh;
-   width: 100%;
-    
+    height: 10vh;
+    width: 100%;
+
 }
 
 
-.text-content{
-    margin:0;
+.text-content {
+
     font-size: 0.6rem;
     text-align: center;
 }
@@ -164,38 +167,73 @@ footer {
     .player,
     .computer {
         min-height: 45%;
-        width: 45%;
+        width: 40%;
     }
 
+    footer>p {
+        margin: 5px 0;
+    }
+
+    #messages {
+        font-size: 10px;
+    }
 
 
 }
 
-/*Changing font size for bigger screen*/
-@media screen and (min-width: 550px){
-    .text-content{
+/*Changing font size for screnns larger then 550px*/
+@media screen and (min-width: 550px) {
+    .text-content {
         font-size: 0.8rem;
     }
-  
-  
+
+
 }
 
-/*Changing font size for bigger screen*/
-@media screen and (min-width: 992px){
-    .text-content{
+@media screen and (min-width: 768px) {
+
+    .player,
+    .computer {
+      
+        width: 40%;
+    }
+
+}
+@media screen and (min-width: 768px){
+      .player,
+    .computer {
+      
+        width: 100%;
+    }
+    #messages{
+        margin: 20px 0 10px 0;
+    }
+    .game-area{
+        margin-top: 3%;
+    }
+}
+
+/*Changing font size for screen up to 992 and larger*/
+@media screen and (min-width: 992px) {
+    .text-content {
         font-size: 1rem;
+
+    }
+
+    .game-area {
+        font-size: 1.2rem;
     }
 
 }
 
 
 
-/*Making the buttons larger*/
+/*Making the buttons larger for screens bigger than 1200px*/
 @media screen and (min-width: 1200px) {
     .control {
 
         margin: 15px 7px;
-
+        font-size: 1rem;
         height: 35px;
         width: 85px;
     }
@@ -208,9 +246,18 @@ footer {
 
     .player,
     .computer {
-        width: 38%;
-        justify-content: space-around;
+        width: 35%;
+
     }
 
+    .text-content {
+        margin: 0;
+    }
+ #messages{
+        margin:  0;
+    }
+    .game-area{
+        margin-top: 1%;
+    }
 
 }
