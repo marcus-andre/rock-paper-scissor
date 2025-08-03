@@ -14,12 +14,16 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 0;
-    margin-left: auto;
-    margin-right: auto;
     height: 100%;
 
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 10%;
+}
 
 header {
     width: 100%;
@@ -44,16 +48,16 @@ header>h2 {
 .game-area {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
-   
+    width: 80%;
+   margin-top: 2%;
     font-family: "Neucha", cursive;
 }
 
 .buttons {
-    margin-top: 3%;
+   
     text-align: center;
 }
 
@@ -74,6 +78,7 @@ header>h2 {
     font-family: "Rock Salt", cursive;
     text-align: center;
     font-size: 0.8rem;
+   
 }
 
 .space {
@@ -83,7 +88,7 @@ header>h2 {
 }
 
 .player {
-    margin: 2%;
+   margin-right: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +105,7 @@ header>h2 {
 }
 
 .computer {
-    margin: 2%;
+    margin-left: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,24 +119,6 @@ header>h2 {
 #computer-image {
     width: 100%;
     max-height: auto;
-}
-
-
-.versus-logo {
-
-    width: 10%;
-}
-
-
-#versus-image {
-    width: 100%;
-}
-
-h4 {
-    font-size: 1rem;
-    margin-top: 10px;
-    margin-bottom: 0;
-    text-align: center;
 }
 
 footer {
@@ -168,6 +155,8 @@ footer {
     .computer {
         min-height: 45%;
         width: 40%;
+        margin: 0;
+        margin-bottom: 10px;
     }
 
     footer>p {
@@ -190,27 +179,26 @@ footer {
 
 }
 
-@media screen and (min-width: 768px) {
 
-    .player,
-    .computer {
-      
-        width: 40%;
-    }
-
-}
 @media screen and (min-width: 768px){
       .player,
     .computer {
       
-        width: 100%;
+        width: 40%;
     }
+  
+     footer>p {
+        margin: 5px 0;
+    }
+
     #messages{
-        margin: 20px 0 10px 0;
+        margin:10px 0;
     }
     .game-area{
-        margin-top: 3%;
+        margin-top: 1.5%;
     }
+
+
 }
 
 /*Changing font size for screen up to 992 and larger*/
@@ -219,9 +207,25 @@ footer {
         font-size: 1rem;
 
     }
+       footer>p {
+        margin: 16px 0;
+    }
 
     .game-area {
         font-size: 1.2rem;
+    }
+      .player,
+    .computer {
+      
+        width: 100%;
+    }
+
+    .buttons{
+        padding-top: 2%;
+    }
+
+    #messages{
+        padding-top: 2%;
     }
 
 }
@@ -238,6 +242,10 @@ footer {
         width: 85px;
     }
 
+      #messages{
+        padding-top: 0%;
+    }
+
 
 }
 
@@ -250,14 +258,20 @@ footer {
 
     }
 
-    .text-content {
-        margin: 0;
+         footer>p {
+        margin: 26px 0 16px 0;
     }
+ 
  #messages{
         margin:  0;
     }
-    .game-area{
-        margin-top: 1%;
-    }
 
+    .control {
+
+        margin:0px 7px 15px 7px;
+        font-size: 1.2rem;
+        height: 40px;
+        width: 90px;
+    }
+   
 }

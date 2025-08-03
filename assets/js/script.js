@@ -1,5 +1,4 @@
 //Declaring constants for DOM elements
-console.log(window.outerWidth);
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 const computerImg = document.getElementById("computer-image");
 const playerImg = document.getElementById("player-image");
@@ -22,7 +21,6 @@ const rules = {
 for (let btn of buttons) {
   btn.addEventListener("click", function () {
     let playerChoice = this.getAttribute("data-choice");
-    console.log(playerChoice);
     gamePlay(playerChoice);
   });
 }
@@ -60,7 +58,7 @@ function determineWinner(player, computer) {
   }
   return "computer";
 }
-console.log(playerScore);
+
 
 function updateScore(result) {
   
