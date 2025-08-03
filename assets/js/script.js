@@ -1,5 +1,5 @@
 //Declaring constants for DOM elements
-
+console.log(window.outerWidth);
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 const computerImg = document.getElementById("computer-image");
 const playerImg = document.getElementById("player-image");
