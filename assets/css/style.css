@@ -2,11 +2,9 @@
 
 html {
     display: flex;
-    flex-direction: column;
-    /* Organiza header, main e footer em coluna */
+    flex-direction: column;    /* Organize the header, main e footer in columns */
     margin: 0;
-    height: 100vh;
-    /* Ocupa toda a altura da viewport */
+    height: 100vh;    /* takes up all the screen height */
 
 }
 
@@ -21,12 +19,10 @@ body {
 }
 
 main {
-    flex: 1;
-    /* Ocupa o espaço restante entre header e footer */
+    flex: 1;    /* takes up all the space from the header down to the footer */
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* Centraliza o conteúdo verticalmente */
+    align-items: center;    /* Centralize the content vertically */
 }
 
 header {
@@ -36,8 +32,7 @@ header {
     line-height: 15px;
     text-align: center;
     box-shadow: -4px 4px 4px #7a8f88;
-    padding: 10px 0;
-    /* Ajuste de padding para consistência */
+    padding: 10px 0;    /* add padding for adjust consistency*/
 }
 
 header>h2 {
@@ -52,13 +47,11 @@ header>h2 {
 
 .game-area {
     display: flex;
-    flex-direction: row;
-    /* Mantém player e computer lado a lado */
+    flex-direction: row;    /* Keep .player and .computer side by side */
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 100%;
-    /* Ocupa toda a altura do main */
+    height:  auto; 
     font-family: "Neucha", cursive;
 }
 
@@ -103,11 +96,12 @@ header>h2 {
     box-shadow: -4px 4px 4px #5a66744e;
     width: 50%;
     height: 80%;
-    /* Ajusta para caber dentro do main */
+    padding-bottom: 1%;    /* adjusting to fit into main */
 }
 
 #player-image {
     width: 100%;
+    
 
 }
 
@@ -117,15 +111,15 @@ header>h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(240, 128, 128);
+    background-color: rgb(249, 151, 151);
     box-shadow: -4px 4px 4px #74615a4e;
     width: 50%;
     height: 80%;
-    /* Ajusta para caber dentro do main */
+    padding-bottom: 1%;    /* adjusting to fit into main */
 }
 
 #computer-image {
-    width: 100%;
+    width:100%;
 }
 
 footer {
@@ -172,10 +166,24 @@ footer {
 
     .player,
     .computer {
-        min-height: 45%;
-        width: 40%;
+        justify-content: flex-start;
+           padding-left: 15px;
+        padding-right: 15px;
         margin: 0;
-        margin-bottom: 10px;
+        
+    }
+    .player{
+        
+        margin-bottom:20px ;
+    }
+
+       #computer-image,#player-image{   
+     
+     margin-bottom: 10px;
+    } 
+
+    .computer>p, .player>p {
+        margin: 10px 0 7px 0;
     }
 
     #messages {
@@ -192,7 +200,7 @@ footer {
 }
 
 /*Changing font size for screnns sizes like IphonePro Max(400px) and bigger*/
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 430px) {
     .text-content {
         font-size: 0.8rem;
     }
@@ -200,15 +208,18 @@ footer {
 
 @media screen and (min-width: 768px) {
 
-    .player,
-    .computer {
-
-        width: 40%;
-    }
+      .computer>p, .player>p {
+    padding-top: 1%;
+     }
 
     .text-content {
         font-size: 0.75rem;
     }
+
+     #computer-image,#player-image{
+     width: 70%;
+     margin-bottom: 10px;
+    } 
 
     #messages {
         margin: 10px 0;
@@ -216,6 +227,7 @@ footer {
 
     .game-area {
         margin-top: 1.5%;
+         height: auto;
     }
 
 }
@@ -226,12 +238,20 @@ footer {
         font-size: 1rem;
 
     }
+    
+  .player,
+    .computer {
+       
+        width: 40%;
+    
+    }
+
 
     .game-area {
         font-size: 1.2rem;
-        height: auto;
+       
         width:100%;
-        padding-bottom: 1%;
+        padding-bottom: 0.5%;
     }
 
     #messages {
@@ -247,8 +267,13 @@ footer {
     .player,
     .computer {
         font-size: 1.8rem;
+        margin-bottom: 0;
+        width: 35%;
 
     }
+  #computer-image,#player-image{
+     width: 60%;
+    } 
 
     .text-content {
         font-size: 1.4rem;

@@ -72,15 +72,15 @@ function updateScore(result) {
 }
 
 function displayResults(player,computer,result){
-console.log(messages)
+
   if(result==='tie'){
     messages.innerText = `It's a tie! Both chose ${choices[player]}`;
   }
   else if(result==='player'){
-    messages.innerText = `You win! "${choices[player].toUpperCase()}" beats "${choices[computer].toUpperCase()}".`
+    messages.innerText = `You win! "${choices[player].toUpperCase()}" beats "${choices[computer].toUpperCase()}".`;
   }
   else {
-     messages.innerText = `You lost! "${choices[computer].toUpperCase()}" beats "${choices[player].toUpperCase()}".`
+     messages.innerText = `You lost! "${choices[computer].toUpperCase()}" beats "${choices[player].toUpperCase()}".`;
   }
 
 }
