@@ -72,8 +72,8 @@ header>h2 {
     margin: 5px 2px;
     display: inline-block;
     font-size: 1.4rem;
-        height: 50px;
-        width: 120px;
+    height: 50px;
+    width: 120px;
 }
 
 .control:hover {
@@ -129,6 +129,9 @@ header>h2 {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Montserrat", sans-serif;
     color: rgb(36, 36, 36);
     background-color: rgb(240, 145, 110);
@@ -140,7 +143,7 @@ footer {
 
 
 .text-content {
-
+    margin: 0;
     font-size: 0.6rem;
     text-align: center;
 }
@@ -149,7 +152,7 @@ footer {
 
 
 
-
+/*Media query for screens sizes smaller than IphonePro Max(400px)*/
 @media (max-width: 400px) {
     .game-area {
         flex-direction: column;
@@ -175,10 +178,6 @@ footer {
         margin-bottom: 10px;
     }
 
-    footer>p {
-        margin: 5px 0;
-    }
-
     #messages {
         font-size: 8px;
     }
@@ -192,15 +191,12 @@ footer {
     }
 }
 
-/*Changing font size for screnns larger then 550px*/
-@media screen and (min-width: 550px) {
+/*Changing font size for screnns sizes like IphonePro Max(400px) and bigger*/
+@media screen and (min-width: 400px) {
     .text-content {
         font-size: 0.8rem;
     }
-
-
 }
-
 
 @media screen and (min-width: 768px) {
 
@@ -210,12 +206,10 @@ footer {
         width: 40%;
     }
 
-    footer>p {
-        margin: 10px 0;
-    }
-    .text-content{
+    .text-content {
         font-size: 0.75rem;
     }
+
     #messages {
         margin: 10px 0;
     }
@@ -223,7 +217,6 @@ footer {
     .game-area {
         margin-top: 1.5%;
     }
-
 
 }
 
@@ -234,19 +227,12 @@ footer {
 
     }
 
-    footer>p {
-        margin: 16px 0;
-    }
-
     .game-area {
         font-size: 1.2rem;
         height: auto;
-        width: 68%;
+        width:100%;
         padding-bottom: 1%;
     }
-
-
-
 
     #messages {
         padding-top: 2%;
@@ -264,15 +250,13 @@ footer {
 
     }
 
-    footer>p {
-        margin: 26px 0 16px 0;
-    }
-    .text-content{
+    .text-content {
         font-size: 1.4rem;
     }
+
     #messages {
         margin: 0;
     }
-  
+
 
 }
