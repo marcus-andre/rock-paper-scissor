@@ -167,20 +167,17 @@ footer {
     .player,
     .computer {
         justify-content: flex-start;
-           padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
         margin: 0;
         
     }
     .player{
         
-        margin-bottom:20px ;
+        margin-bottom:10px ;
     }
 
-       #computer-image,#player-image{   
-     
-     margin-bottom: 10px;
-    } 
+       
 
     .computer>p, .player>p {
         margin: 10px 0 7px 0;
@@ -210,15 +207,25 @@ footer {
 
       .computer>p, .player>p {
     padding-top: 1%;
+    margin: 7px 0;
+     }
+
+     .computer, .player{
+         padding-bottom:10px;
+         
      }
 
     .text-content {
         font-size: 0.75rem;
     }
 
+    .game-area{
+        width: 90%;
+    }
+
      #computer-image,#player-image{
      width: 70%;
-     margin-bottom: 10px;
+    
     } 
 
     #messages {
@@ -242,7 +249,7 @@ footer {
   .player,
     .computer {
        
-        width: 40%;
+        width: 43%;
     
     }
 
@@ -268,11 +275,11 @@ footer {
     .computer {
         font-size: 1.8rem;
         margin-bottom: 0;
-        width: 35%;
+        width: 40%;
 
     }
   #computer-image,#player-image{
-     width: 60%;
+     width: 55%;
     } 
 
     .text-content {
